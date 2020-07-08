@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+.container {
+    max-width: 90%;
+}
+
+.header {
+    height: 120px;
+    width: 100%;
+    background-color: #212121;
+    font-size: 20px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    h1 {
+        line-height: 120px;
+    }
+}
+
+.dashboard {
+    text-align: center;
+    padding: 30px 0;
+
+    button {
+        cursor: pointer;
+        font-family: Open Sans, sans-serif;
+        background-color: #ff8a80;
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        font-size: 24px;
+        padding: 0.5em 2em;
+        margin-bottom: 20px;
+        outline: none;
+
+        &:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+        }
+    }
+
+    &__pokemons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &_item {
+            border: 0.5px solid #bdbdbd;
+            padding: 20px;
+            margin: 20px 0;
+            flex-basis: 400px;
+            height: auto;
+            align-items: stretch;
+            button {
+                margin: 0.6em auto;
+                font-size: 14px;
+                background-color: #90caf9;
+            }
+
+            &.text-item {
+                flex-basis: 100%;
+
+                button {
+                    margin: 1em;
+                    font-size: 14px;
+                    background-color: #ce93d8;
+                }
+            }
+        }
+
+        .strong {
+            border: 2px solid #b71c1c;
+        }
+    }
+}

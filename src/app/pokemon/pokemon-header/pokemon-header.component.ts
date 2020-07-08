@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
-  selector: 'app-pokemon-header',
-  templateUrl: './pokemon-header.component.html',
-  styleUrls: ['./pokemon-header.component.scss']
+    selector: 'app-pokemon-header',
+    templateUrl: './pokemon-header.component.html',
+    styleUrls: ['./pokemon-header.component.scss'],
 })
 export class PokemonHeaderComponent implements OnInit {
+    appTitle = 'Pokemon Application'
+    constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+    ngOnInit(): void {}
 }

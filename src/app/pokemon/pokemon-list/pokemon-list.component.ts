@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core'
-
 export interface Pokemon {
     name: string
     id: number
@@ -7,7 +6,6 @@ export interface Pokemon {
     imgSrc: string
     isCaught: boolean
 }
-
 @Component({
     selector: 'app-pokemon-list',
     templateUrl: './pokemon-list.component.html',
@@ -93,13 +91,20 @@ export class PokemonListComponent implements OnInit {
             isCaught: false,
         },
     ]
-    constructor() {}
-
     dashboardView: boolean = true
+
+    ngOnInit(): void {}
 
     switchView() {
         this.dashboardView = !this.dashboardView
     }
 
-    ngOnInit(): void {}
+    onCatch(pokemon: Pokemon) {
+        pokemon.isCaught = !pokemon.isCaught
+        if (pokemon.isCaught) {
+            console.log(`Покемон ${pokemon.name} был пойман`)
+        } else {
+            console.log(`Покемон ${pokemon.name} был отпущен`)
+        }
+    }
 }

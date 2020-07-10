@@ -95,17 +95,6 @@ export class PokemonListComponent implements OnInit {
     ]
     constructor() {}
 
-    isCaught: boolean = false
-
-    catchPokemon(pokemon) {
-        pokemon.isCaught = !pokemon.isCaught
-        if (pokemon.isCaught) {
-            console.log(`Покемон ${pokemon.name} был пойман`)
-        } else {
-            console.log(`Покемон ${pokemon.name} был отпущен`)
-        }
-    }
-
     dashboardView: boolean = true
 
     switchView() {

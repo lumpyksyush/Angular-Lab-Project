@@ -4,37 +4,18 @@
             Switch view
         </button>
         <div class="dashboard__pokemons" *ngIf="dashboardView; else textView">
-            <div
-                class="dashboard__pokemons_item"
-                [ngStyle]="{
-                    border:
-                        pokemon.damage > 50
-                            ? '2px solid #b71c1c'
-                            : '0.5px solid #bdbdbd'
-                }"
-                *ngFor="let pokemon of pokemons"
-            >
-                <img [src]="pokemon.imgSrc" [alt]="pokemon.name" />
-                <h2>{{ pokemon.name }}</h2>
-                <p><strong>id:</strong> {{ pokemon.id }}</p>
-                <p><strong>damage:</strong> {{ pokemon.damage }}</p>
-                <button (click)="catchPokemon(this.pokemon)">
-                    {{ pokemon.isCaught ? 'Отпустить' : 'Поймать' }}
-                </button>
+            <div *ngFor="let pokemon of pokemons">
+                <app-pokemon-list-item
+                    [pokemon]="pokemon"
+                ></app-pokemon-list-item>
             </div>
         </div>
         <ng-template #textView>
             <div class="dashboard__pokemons">
-                <div
-                    *ngFor="let pokemon of pokemons"
-                    class="dashboard__pokemons_item text-item"
-                >
-                    <h2>{{ pokemon.name }}</h2>
-                    <span><strong>id:</strong> {{ pokemon.id }} </span>
-                    <span><strong>damage:</strong> {{ pokemon.damage }}</span>
-                    <button (click)="catchPokemon(this.pokemon)">
-                        {{ pokemon.isCaught ? 'Отпустить' : 'Поймать' }}
-                    </button>
+                <div *ngFor="let pokemon of pokemons">
+                    <app-pokemon-list-item-text
+                        [pokemon]="pokemon"
+                    ></app-pokemon-list-item-text>
                 </div>
             </div>
         </ng-template>

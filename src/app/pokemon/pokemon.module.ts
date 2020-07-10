@@ -3,18 +3,21 @@ import { CommonModule } from '@angular/common'
 import { PokemonHeaderComponent } from './pokemon-header/pokemon-header.component'
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component'
 import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.component'
+import { PokemonListItemTextComponent } from './pokemon-list-item-text/pokemon-list-item-text.component'
 
 @NgModule({
     declarations: [
         PokemonHeaderComponent,
         PokemonListComponent,
         PokemonListItemComponent,
+        PokemonListItemTextComponent,
     ],
     imports: [CommonModule],
     exports: [
         PokemonHeaderComponent,
         PokemonListComponent,
         PokemonListItemComponent,
+        PokemonListItemTextComponent,
     ],
 })
 export class PokemonModule {}

@@ -7,5 +7,5 @@ import { Pokemon } from './pokemon/pokemon-list/pokemon-list.component'
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    @Input() pokemons: Pokemon[] = []
+    //@Input() pokemons: Pokemon[] = []
 }

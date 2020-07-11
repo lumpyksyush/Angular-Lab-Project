@@ -4,6 +4,8 @@ import { PokemonHeaderComponent } from './pokemon-header/pokemon-header.componen
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component'
 import { PokemonListItemComponent } from './pokemon-list-item/pokemon-list-item.component'
 import { PokemonListItemTextComponent } from './pokemon-list-item-text/pokemon-list-item-text.component'
+import { PokemonService } from './pokemon.service';
+import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component'
 
 @NgModule({
     declarations: [
@@ -11,6 +13,7 @@ import { PokemonListItemTextComponent } from './pokemon-list-item-text/pokemon-l
         PokemonListComponent,
         PokemonListItemComponent,
         PokemonListItemTextComponent,
+        PokemonSearchComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -19,5 +22,6 @@ import { PokemonListItemTextComponent } from './pokemon-list-item-text/pokemon-l
         PokemonListItemComponent,
         PokemonListItemTextComponent,
     ],
+    providers: [PokemonService],
 })
 export class PokemonModule {}

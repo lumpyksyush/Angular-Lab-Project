@@ -1,8 +1,7 @@
-<figure
+<div
     class="dashboard__pokemons_item"
     [ngStyle]="{
-        border:
-            pokemon.damage > 50 ? '2px solid #b71c1c' : '0.5px solid #bdbdbd'
+        border: pokemon.damage > 50 ? '2px solid #b71c1c' : '1px dotted #000'
     }"
 >
     <img [src]="pokemon.imgSrc" [alt]="pokemon.name" />
@@ -12,4 +11,4 @@
     <button (click)="catchPokemon(pokemon)">
         {{ pokemon.isCaught ? 'Отпустить' : 'Поймать' }}
     </button>
-</figure>
+</div>

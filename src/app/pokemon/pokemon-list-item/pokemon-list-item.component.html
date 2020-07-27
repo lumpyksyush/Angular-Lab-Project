@@ -4,11 +4,16 @@
         border: pokemon.damage > 50 ? '2px solid #b71c1c' : '1px dotted #000'
     }"
 >
+    <button class="edit-button">
+        Edit
+    </button>
     <img [src]="pokemon.imgSrc" [alt]="pokemon.name" />
-    <h2>{{ pokemon.name }}</h2>
+    <h2>
+        <a [routerLink]="['/details', pokemon.id]">{{ pokemon.name }}</a>
+    </h2>
     <p><strong>id:</strong> {{ pokemon.id }}</p>
     <p><strong>damage:</strong> {{ pokemon.damage }}</p>
     <button (click)="catchPokemon(pokemon)">
-        {{ pokemon.isCaught ? 'Отпустить' : 'Поймать' }}
+        {{ pokemon.isCaught ? 'Release' : 'Catch' }}
     </button>
 </div>

@@ -4,7 +4,12 @@
         border: pokemon.damage > 50 ? '2px solid #b71c1c' : '1px dotted #000'
     }"
 >
-    <h2>{{ pokemon.name }}</h2>
+    <button class="edit-button">
+        Edit
+    </button>
+    <h2>
+        <a [routerLink]="['/details', pokemon.id]">{{ pokemon.name }}</a>
+    </h2>
     <span><strong>id:</strong> {{ pokemon.id }} </span>
     <span><strong>damage:</strong> {{ pokemon.damage }}</span>
     <button (click)="catchPokemon(pokemon)">

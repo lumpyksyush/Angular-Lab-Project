@@ -17,6 +17,7 @@ import { Pokemon } from '../pokemon-list/pokemon-list.component'
 export class PokemonListItemComponent implements OnInit {
     @Input() pokemon: Pokemon
     @Output() onCatch = new EventEmitter<Pokemon>()
+
     constructor() {}
 
     ngOnInit(): void {}

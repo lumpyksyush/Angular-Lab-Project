@@ -6,6 +6,8 @@ export interface Pokemon {
     damage: number
     imgSrc: string
     isCaught: boolean
+    detail?: string
+    date?: string
 }
 @Component({
     selector: 'app-pokemon-list',
@@ -24,6 +26,10 @@ export class PokemonListComponent implements OnInit {
 
     switchView() {
         this.dashboardView = !this.dashboardView
+    }
+
+    filterByName(name: string): void {
+        this.pokemons = this._pokemonService.filterByName(name)
     }
 
     onCatch(pokemon: Pokemon) {

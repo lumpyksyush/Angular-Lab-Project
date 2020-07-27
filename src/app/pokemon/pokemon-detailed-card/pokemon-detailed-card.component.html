@@ -1,0 +1,20 @@
+<div class="dashboard__pokemons_item-detailed">
+    <button class="edit-button">
+        Edit
+    </button>
+    <img [src]="pokemon.imgSrc" [alt]="pokemon.name" />
+    <h2>{{ pokemon.name }}</h2>
+    <section class="detailed-info">
+        <p><strong>id:</strong> {{ pokemon.id }}</p>
+        <p><strong>damage:</strong> {{ pokemon.damage }}</p>
+        <article>
+            <strong>detailed information:</strong>
+            <p></p>
+            {{ pokemon.detail }}
+        </article>
+        <p><strong>creation date:</strong> {{ pokemon.date }}</p>
+    </section>
+    <button [pokemon]="pokemon" (click)="onCatch($event)">
+        {{ pokemon.isCaught ? 'Release' : 'Catch' }}
+    </button>
+</div>

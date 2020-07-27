@@ -3,7 +3,9 @@
         <button class="dashboard__button" (click)="switchView()">
             Switch view
         </button>
-        <app-pokemon-search></app-pokemon-search>
+        <app-pokemon-search
+            (changed)="filterByName($event)"
+        ></app-pokemon-search>
         <main>
             <div
                 class="dashboard__pokemons"

@@ -2,12 +2,10 @@ import {
     Component,
     OnInit,
     Input,
-    Output,
-    EventEmitter,
     ChangeDetectionStrategy,
 } from '@angular/core'
 import { Pokemon } from '../pokemon-list/pokemon-list.component'
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 import { PokemonService } from '../pokemon.service'
 
 @Component({
@@ -21,6 +19,7 @@ export class PokemonDetailedCardComponent implements OnInit {
 
     constructor(
         private _route: ActivatedRoute,
+        private _router: Router,
         private _pokemonService: PokemonService
     ) {}
 
@@ -38,5 +37,9 @@ export class PokemonDetailedCardComponent implements OnInit {
         } else {
             console.log(`Покемон ${this.pokemon.name} был отпущен`)
         }
+    }
+
+    navigateToForm(id: number) {
+        this._router.navigate([`details/${id}/edit`])
     }
 }

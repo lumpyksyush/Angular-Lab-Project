@@ -8,6 +8,7 @@ import { PokemonListItemTextComponent } from './pokemon-list-item-text/pokemon-l
 import { PokemonService } from './pokemon.service'
 import { PokemonSearchComponent } from './pokemon-search/pokemon-search.component'
 import { PokemonDetailedCardComponent } from './pokemon-detailed-card/pokemon-detailed-card.component'
+import { PokemonEditFormComponent } from './pokemon-edit-form/pokemon-edit-form.component'
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import { PokemonDetailedCardComponent } from './pokemon-detailed-card/pokemon-de
         PokemonListItemTextComponent,
         PokemonSearchComponent,
         PokemonDetailedCardComponent,
+        PokemonEditFormComponent,
     ],
     imports: [CommonModule, RouterModule, FormsModule],
     exports: [
@@ -23,6 +25,7 @@ import { PokemonDetailedCardComponent } from './pokemon-detailed-card/pokemon-de
         PokemonListItemComponent,
         PokemonListItemTextComponent,
         PokemonDetailedCardComponent,
+        PokemonEditFormComponent,
     ],
     providers: [PokemonService],
 })

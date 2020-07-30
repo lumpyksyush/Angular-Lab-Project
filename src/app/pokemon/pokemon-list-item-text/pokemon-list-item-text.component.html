@@ -4,7 +4,7 @@
         border: pokemon.damage > 50 ? '2px solid #b71c1c' : '1px dotted #000'
     }"
 >
-    <button class="edit-button">
+    <button class="edit-button" (click)="navigateToForm(pokemon.id)">
         Edit
     </button>
     <h2>

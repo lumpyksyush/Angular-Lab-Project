@@ -8,21 +8,30 @@
                 type="text"
                 name="name"
                 placeholder="Enter the pokemon's name"
+                [(ngModel)]="pokemon.name"
             />
         </div>
         <div class="form__input">
             <label for="pokemonDamage">Damage:</label>
             <input
-                type="text"
-                name="name"
+                type="number"
+                name="damage"
                 placeholder="Enter the amount of damage points"
+                [(ngModel)]="pokemon.damage"
             />
         </div>
         <div class="form__input">
             <label for="pokemonDate">Date of creation:</label>
-            <input type="text" name="date" placeholder="Enter the date" />
+            <input
+                type="date"
+                name="date"
+                placeholder="Enter the date"
+                [(ngModel)]="pokemon.date"
+            />
         </div>
-        <button class="btn-submit" type="submit">Save</button>
-        <button class="btn-cancel">Cancel</button>
+        <button class="btn-submit" type="submit" (click)="saveChanges()">
+            Save
+        </button>
+        <button class="btn-cancel" (click)="redirectToDetails()">Cancel</button>
     </form>
 </div>

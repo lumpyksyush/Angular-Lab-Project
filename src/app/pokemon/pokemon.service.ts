@@ -132,4 +132,10 @@ export class PokemonService {
     filterByName(name: string): Pokemon[] {
         return this.pokemons.filter((pokemon: Pokemon) => pokemon.name === name)
     }
+
+    updateInfo(pokemon: Pokemon): void {
+        this.pokemons = this.pokemons.map((data) =>
+            data.id === pokemon.id ? pokemon : data
+        )
+    }
 }

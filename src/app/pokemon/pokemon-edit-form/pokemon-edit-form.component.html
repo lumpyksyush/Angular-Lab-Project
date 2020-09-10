@@ -1,0 +1,37 @@
+<div class="form container">
+    <form action="" id="pokemonEdit">
+        <img [src]="pokemon.imgSrc" [alt]="pokemon.name" />
+        <h2>Edit {{ pokemon.name }}</h2>
+        <div class="form__input">
+            <label for="pokemonName">Name:</label>
+            <input
+                type="text"
+                name="name"
+                placeholder="Enter the pokemon's name"
+                [(ngModel)]="pokemon.name"
+            />
+        </div>
+        <div class="form__input">
+            <label for="pokemonDamage">Damage:</label>
+            <input
+                type="number"
+                name="damage"
+                placeholder="Enter the amount of damage points"
+                [(ngModel)]="pokemon.damage"
+            />
+        </div>
+        <div class="form__input">
+            <label for="pokemonDate">Date of creation:</label>
+            <input
+                type="date"
+                name="date"
+                placeholder="Enter the date"
+                [(ngModel)]="pokemon.date"
+            />
+        </div>
+        <button class="btn-submit" type="submit" (click)="saveChanges()">
+            Save
+        </button>
+        <button class="btn-cancel" (click)="redirectToDetails()">Cancel</button>
+    </form>
+</div>

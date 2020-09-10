@@ -6,6 +6,7 @@ import {
     Output,
     EventEmitter,
 } from '@angular/core'
+import { Router } from '@angular/router'
 import { Pokemon } from '../pokemon-list/pokemon-list.component'
 
 @Component({
@@ -17,11 +18,16 @@ import { Pokemon } from '../pokemon-list/pokemon-list.component'
 export class PokemonListItemTextComponent implements OnInit {
     @Input() pokemon: Pokemon
     @Output() onCatch = new EventEmitter<Pokemon>()
-    constructor() {}
+
+    constructor(private _router: Router) {}
 
     ngOnInit(): void {}
 
     catchPokemon(pokemon: Pokemon) {
         this.onCatch.emit(pokemon)
+    }
+
+    navigateToForm(id: number) {
+        this._router.navigate([`details/${id}/edit`])
     }
 }

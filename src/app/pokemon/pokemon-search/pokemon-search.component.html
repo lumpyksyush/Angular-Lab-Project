@@ -1,4 +1,9 @@
 <div class="search">
-    <input type="text" placeholder="Which pokemon would you like to find?" />
-    <button>Search!</button>
+    <input
+        type="search"
+        placeholder="Which pokemon would you like to find?"
+        [(ngModel)]="name"
+        [ngModelOptions]="{ standalone: true }"
+    />
+    <button type="submit" (click)="filterByName()">Search!</button>
 </div>

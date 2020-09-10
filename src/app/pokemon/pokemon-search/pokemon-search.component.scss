@@ -1,0 +1,19 @@
+.search {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+
+    input {
+        margin: 0 20px 0 0;
+        width: 40%;
+        font-size: 14px;
+        padding: 0.5em;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    button {
+        margin: 0 20px 0 0;
+        font-size: 20px;
+        background-color: #2196f3;
+    }
+}

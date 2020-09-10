@@ -1,1 +1,15 @@
-<p>pokemon-list-item works!</p>
+<div
+    class="dashboard__pokemons_item"
+    [ngStyle]="{
+        border:
+            pokemon.damage > 50 ? '2px solid #b71c1c' : '0.5px solid #bdbdbd'
+    }"
+>
+    <img [src]="pokemon.imgSrc" [alt]="pokemon.name" />
+    <h2>{{ pokemon.name }}</h2>
+    <p><strong>id:</strong> {{ pokemon.id }}</p>
+    <p><strong>damage:</strong> {{ pokemon.damage }}</p>
+    <button (click)="catchPokemon(pokemon)">
+        {{ pokemon.isCaught ? 'Отпустить' : 'Поймать' }}
+    </button>
+</div>

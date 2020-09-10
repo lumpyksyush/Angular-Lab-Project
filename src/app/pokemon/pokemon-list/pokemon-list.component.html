@@ -1,0 +1,23 @@
+<div class="dashboard">
+    <div class="container">
+        <button class="dashboard__button" (click)="switchView()">
+            Switch view
+        </button>
+        <div class="dashboard__pokemons" *ngIf="dashboardView; else textView">
+            <div *ngFor="let pokemon of pokemons">
+                <app-pokemon-list-item
+                    [pokemon]="pokemon"
+                ></app-pokemon-list-item>
+            </div>
+        </div>
+        <ng-template #textView>
+            <div class="dashboard__pokemons">
+                <div *ngFor="let pokemon of pokemons">
+                    <app-pokemon-list-item-text
+                        [pokemon]="pokemon"
+                    ></app-pokemon-list-item-text>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>

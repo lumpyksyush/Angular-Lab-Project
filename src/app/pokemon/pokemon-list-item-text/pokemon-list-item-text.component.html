@@ -1,0 +1,8 @@
+<div class="dashboard__pokemons_item text-item">
+    <h2>{{ pokemon.name }}</h2>
+    <span><strong>id:</strong> {{ pokemon.id }} </span>
+    <span><strong>damage:</strong> {{ pokemon.damage }}</span>
+    <button (click)="catchPokemon(pokemon)">
+        {{ pokemon.isCaught ? 'Отпустить' : 'Поймать' }}
+    </button>
+</div>
